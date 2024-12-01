@@ -11,7 +11,7 @@ JSDoc comments can take up significant vertical space in your code editor. Long 
 - Automatically folds JSDoc comment blocks when opening files
 - Preserves the first line (/** */) for visibility
 - Supports both JavaScript and TypeScript files
-- Simple toggle to enable/disable auto-folding through VS Code settings
+- Configurable through VS Code settings
 
 ## Usage
 
@@ -28,18 +28,15 @@ function example() {}
 
 ## Configuration
 
-You can configure the extension in two ways:
+You can configure the extension through VS Code settings:
 
-1. Through Command Palette (⌘ + ⇧ + P on macOS or Ctrl + Shift + P on Windows/Linux):
-   - `JSDoc Folder: Enable Auto-Folding`
-   - `JSDoc Folder: Disable Auto-Folding`
+1. Open VS Code Settings (⌘, on macOS or Ctrl+, on Windows/Linux)
+2. Search for "JSDoc Folder"
+3. Find the following settings:
 
-2. Through VS Code settings:
-   - Open VS Code Settings (⌘, on macOS or Ctrl+, on Windows/Linux)
-   - Search for "JSDoc Folder"
-   - Toggle `jsdocFolder.autoFold` setting:
-     - `true` (default): Automatically fold JSDoc comments when opening files
-     - `false`: Leave JSDoc comments unfolded
+* `jsdocFolder.autoFold`: Enable/disable automatic folding of JSDoc comments
+  * `true` (default): Automatically fold JSDoc comments when opening files
+  * `false`: Leave JSDoc comments unfolded
 
 You can also directly edit settings.json:
 
@@ -52,8 +49,8 @@ You can also directly edit settings.json:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/aydgn/jsdoc-folder.git
-cd jsdoc-folder
+git clone https://github.com/aydgn/fold-jsdoc.git
+cd fold-jsdoc
 ```
 
 2. Install dependencies:
