@@ -101,6 +101,21 @@ export function activate(context: vscode.ExtensionContext) {
             }
         })
     );
+
+    // Register commands for enabling/disabling auto-fold
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jsdocFolder.enableAutoFold', () => {
+            vscode.workspace.getConfiguration('jsdocFolder').update('autoFold', true, true);
+            vscode.window.showInformationMessage('JSDoc auto-folding enabled');
+        })
+    );
+
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jsdocFolder.disableAutoFold', () => {
+            vscode.workspace.getConfiguration('jsdocFolder').update('autoFold', false, true);
+            vscode.window.showInformationMessage('JSDoc auto-folding disabled');
+        })
+    );
 }
 
 // Called when the extension is deactivated

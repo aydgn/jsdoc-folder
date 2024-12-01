@@ -15,12 +15,31 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "jsdoc",
+    "comment",
+    "fold",
+    "collapse",
+    "javascript",
+    "typescript"
+    
+  ],
   "activationEvents": [
     "onLanguage:javascript",
     "onLanguage:typescript"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "jsdocFolder.enableAutoFold",
+        "title": "JSDoc Folder: Enable Auto-Folding"
+      },
+      {
+        "command": "jsdocFolder.disableAutoFold",
+        "title": "JSDoc Folder: Disable Auto-Folding"
+      }
+    ],
     "configuration": {
       "title": "JSDoc Folder",
       "properties": {
