@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.4]
+
+### Added
+- Extension marketplace icon
+
 ## [0.0.3]
 
 ### Changed
