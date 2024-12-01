@@ -2,7 +2,7 @@
   "name": "jsdoc-folder",
   "displayName": "JSDoc Folder",
   "description": "Automatically collapses JSDoc comment blocks by default",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "aydgn",
   "repository": {
     "type": "git",
@@ -22,13 +22,12 @@
     "collapse",
     "javascript",
     "typescript"
-
   ],
   "activationEvents": [
     "onLanguage:javascript",
     "onLanguage:typescript"
   ],
-  "main": "./out/extension.js",
+  "main": "./out/extension.min.js",
   "contributes": {
     "commands": [
       {
@@ -52,14 +51,14 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
+    "vscode:prepublish": "rimraf ./out && npm run build:prod",
+    "build": "rimraf ./out && node ./esbuild.config.js",
+    "build:prod": "rimraf ./out && node ./esbuild.config.js production",
+    "watch": "node ./esbuild.config.js watch",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js",
-    "package": "npx @vscode/vsce package",
-    "publish": "npx @vscode/vsce publish"
+    "test": "npm run build && node ./out/test/runTest.js",
+    "package": "npm run build:prod && vsce package",
+    "publish": "npm run build:prod && vsce publish"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
@@ -68,6 +67,9 @@
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "^8.46.0",
     "typescript": "^5.1.6",
-    "@vscode/vsce": "^2.21.0"
-  }
+    "@vscode/vsce": "^2.21.0",
+    "esbuild": "^0.24.0",
+    "rimraf": "^5.0.1"
+  },
+  "dependencies": {}
 }
