@@ -55,7 +55,6 @@
     "build": "rimraf ./out && node ./esbuild.config.js",
     "build:prod": "rimraf ./out && node ./esbuild.config.js production",
     "watch": "node ./esbuild.config.js watch",
-    "lint": "eslint src --ext ts",
     "test": "npm run build && node ./out/test/runTest.js",
     "package": "npm run build:prod && vsce package",
     "publish": "npm run build:prod && vsce publish"
@@ -63,9 +62,6 @@
   "devDependencies": {
     "@types/vscode": "^1.80.0",
     "@types/node": "^20.4.5",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
-    "eslint": "^8.46.0",
     "typescript": "^5.1.6",
     "@vscode/vsce": "^2.21.0",
     "esbuild": "^0.24.0",
