@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.3]
+
+### Changed
+- Replaced build system with esbuild for optimized builds
+- Removed ESLint dependency
+
 ## [0.0.2]
 
 ### Added
