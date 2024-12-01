@@ -1,0 +1,54 @@
+{
+  "name": "jsdoc-folder",
+  "displayName": "JSDoc Folder",
+  "description": "Automatically collapses JSDoc comment blocks by default",
+  "version": "0.0.1",
+  "publisher": "aydgn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aydgn/jsdoc-folder.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "JSDoc Folder",
+      "properties": {
+        "jsdocFolder.autoFold": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically fold JSDoc comments when opening files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "typescript": "^5.1.6",
+    "@vscode/vsce": "^2.21.0"
+  }
+}
