@@ -4,6 +4,7 @@
   "description": "Automatically collapses JSDoc comment blocks by default",
   "version": "0.0.3",
   "publisher": "aydgn",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/aydgn/jsdoc-folder.git"
