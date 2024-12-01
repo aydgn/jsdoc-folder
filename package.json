@@ -2,7 +2,7 @@
   "name": "jsdoc-folder",
   "displayName": "JSDoc Folder",
   "description": "Automatically collapses JSDoc comment blocks by default",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "aydgn",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "collapse",
     "javascript",
     "typescript"
-    
+
   ],
   "activationEvents": [
     "onLanguage:javascript",
