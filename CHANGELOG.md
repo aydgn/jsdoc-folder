@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.5]
+
+### Added
+- Support for JSX and TSX files
+- Full comment folding - shows only the first line of JSDoc comments
+
 ## [0.0.4]
 
 ### Added
