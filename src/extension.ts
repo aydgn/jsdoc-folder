@@ -71,7 +71,7 @@ const foldJSDoc = async (
 };
 
 export function activate(context: vscode.ExtensionContext): void {
-  const supportedLanguages = ["javascript", "typescript"];
+  const supportedLanguages = ["javascript", "typescript", "javascriptreact", "typescriptreact"];
   const provider = { provideFoldingRanges };
 
   // Register providers and handlers
