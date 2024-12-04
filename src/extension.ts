@@ -96,10 +96,10 @@ export function activate(context: vscode.ExtensionContext): void {
     })
   );
 
-  // Initial fold for active editor
-  if (vscode.window.activeTextEditor) {
-    foldJSDoc(vscode.window.activeTextEditor, supportedLanguages, provider);
-  }
+  // Initial fold for all visible editors
+  vscode.window.visibleTextEditors.forEach(editor => {
+    if (editor) foldJSDoc(editor, supportedLanguages, provider);
+  });
 }
 
 export function deactivate(): void {}
