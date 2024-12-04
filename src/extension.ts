@@ -11,7 +11,8 @@ const createFoldingRange = (startLine: number, endLine: number): vscode.FoldingR
   // Ignore single-line JSDoc comments
   if (lineSpan <= 2) return null;
 
-  return new vscode.FoldingRange(startLine + 1, endLine - 1);
+  // Include the entire comment block in the folding range
+  return new vscode.FoldingRange(startLine, endLine);
 };
 
 const getConfig = () => vscode.workspace.getConfiguration("jsdocFolder");
