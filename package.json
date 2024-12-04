@@ -33,7 +33,7 @@
     "onLanguage:javascriptreact",
     "onLanguage:typescriptreact"
   ],
-  "main": "./out/extension.min.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -61,6 +61,7 @@
     "build": "rimraf ./out && node ./esbuild.config.js",
     "build:prod": "rimraf ./out && node ./esbuild.config.js production",
     "watch": "node ./esbuild.config.js watch",
+    "dev": "rimraf ./out && node ./esbuild.config.js watch --dev & code --extensionDevelopmentPath=${PWD}",
     "test": "npm run build && node ./out/test/runTest.js",
     "package": "npm run build:prod && vsce package",
     "publish": "npm run build:prod && vsce publish"

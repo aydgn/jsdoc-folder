@@ -7,12 +7,12 @@ const isWatch = process.argv.includes('watch');
 const buildOptions = {
   entryPoints: ['./src/extension.ts'],
   bundle: true,
-  outfile: isProduction ? './out/extension.min.js' : './out/extension.js',
+  outfile: './out/extension.js'
   platform: 'node',
   target: 'node14',
   format: 'cjs',
   external: ['vscode'], // Required for VSCode extensions
-  minify: isProduction,
+  minify: isProduction, // Minify in production mode
   sourcemap: !isProduction,
   tsconfig: './tsconfig.json',
   logLevel: 'info',
