@@ -22,11 +22,16 @@
     "fold",
     "collapse",
     "javascript",
-    "typescript"
+    "typescript",
+    "jsx",
+    "tsx"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onLanguage:javascript",
-    "onLanguage:typescript"
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
   ],
   "main": "./out/extension.min.js",
   "contributes": {

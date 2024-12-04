@@ -10,7 +10,7 @@ JSDoc comments can take up significant vertical space in your code editor. Long 
 
 - Automatically folds JSDoc comment blocks when opening files
 - Preserves the first line (/** */) for visibility
-- Supports both JavaScript and TypeScript files
+- Supports JavaScript, TypeScript, JSX, and TSX files
 - Configurable through VS Code settings
 
 ## Usage
