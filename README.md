@@ -1,3 +1,5 @@
+
+
 # JSDoc Folder
 
 Automatically collapses JSDoc comment blocks by default when opening JavaScript and TypeScript files.
@@ -49,8 +51,8 @@ You can also directly edit `settings.json`:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/aydgn/fold-jsdoc.git
-cd fold-jsdoc
+git clone https://github.com/aydgn/jsdoc-folder.git
+cd jsdoc-folder
 ```
 
 2. Install dependencies:
